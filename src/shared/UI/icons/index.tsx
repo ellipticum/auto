@@ -22,8 +22,10 @@ import Verified from '@/shared/UI/icons/verified'
 import DarkMode from '@/shared/UI/icons/dark-mode'
 import LightMode from '@/shared/UI/icons/light-mode'
 import Chevron from '@/shared/UI/icons/chevron'
+import Done from '@/shared/UI/icons/done'
 
 const Icons: Record<string, React.ComponentType<IconProps>> = {
+    Done,
     Chevron,
     Logo,
     About,

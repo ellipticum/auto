@@ -1,0 +1,32 @@
+.button {
+    border-radius: 1.5rem;
+    color: var(--additional-color-5);
+    padding: 0.75rem 1.125rem;
+    background: var(--primary-color-5);
+    font-size: 1.0rem;
+
+    &:hover {
+        background: var(--identify-color-5);
+    }
+
+    &.bright {
+        background: var(--primary-500);
+        color: var(--additional-200);
+
+        &:hover {
+            background: var(--primary-600);
+        }
+    }
+
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.filled {
+    width: 100%;
+}
+
+.rounded {
+    border-radius: var(--rounded);
+}

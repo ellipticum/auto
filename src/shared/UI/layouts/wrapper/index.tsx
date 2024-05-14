@@ -8,6 +8,8 @@ import LayoutProps from '@/shared/interfaces/layout-props'
 
 import useModeStore, { Mode } from '@/shared/model/mode'
 
+import Notification from '@/widgets/notification/UI'
+
 import Header from '@/shared/UI/header'
 
 const Wrapper = ({ children }: LayoutProps) => {
@@ -22,6 +24,7 @@ const Wrapper = ({ children }: LayoutProps) => {
     return (
         <div id='wrapper' className={styles.wrapper} data-mode={mode}>
             {children}
+            <Notification />
         </div>
     )
 }

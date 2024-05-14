@@ -1,0 +1,46 @@
+.notification {
+  @include row(.75rem);
+
+  align-items: center;
+  background: #303030;
+  border-radius: .75rem;
+  transition: 200ms all ease-in-out;
+  padding: 1.125rem 1.5rem;
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+}
+
+.message {
+  font-size: 1.125rem;
+
+  color: #FFFFFF;
+}
+
+.success {
+  & p {
+    color: #00FF70;
+  }
+
+  & path, svg {
+    fill: #00FF70;
+    stroke: #00FF70;
+  }
+}
+
+.failed {
+  & p {
+    color: #FF5050;
+  }
+
+  & path, svg {
+    fill: #FF5050;
+    stroke: #FF5050;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  right: -10rem;
+}

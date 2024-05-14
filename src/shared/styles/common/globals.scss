@@ -64,3 +64,11 @@ h5 {
 h6 {
   @include text-90;
 }
+
+.hint {
+  font-size: .875rem;
+
+  & a {
+    color: var(--identify-color-5);
+  }
+}

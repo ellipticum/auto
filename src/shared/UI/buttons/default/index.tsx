@@ -1,13 +1,43 @@
-'use client'
+import React, { CSSProperties, ReactNode } from 'react'
 
-import React from 'react'
+import cn from 'classnames'
 
-import ButtonProps from '@/shared/interfaces/button-props'
+import styles from './styles.module.scss'
 
-import Buttons from '@/shared/UI/buttons'
+interface Props {
+    children: ReactNode
+    isOutlined?: boolean
+    isFilled?: boolean
+    isRounded?: boolean
+    isBright?: boolean
+    onClick: () => void
+    style?: CSSProperties
+}
 
-const Default = (props: ButtonProps) => {
-    return <Buttons.Layout {...props} />
+const Default = ({
+    children,
+    isOutlined = false,
+    isFilled = false,
+    isRounded = false,
+    isBright = false,
+    onClick,
+    style
+}: Props) => {
+    return (
+        <button
+            style={style}
+            className={cn(
+                styles.button,
+                { [styles.outlined]: isOutlined },
+                { [styles.filled]: isFilled },
+                { [styles.rounded]: isRounded },
+                { [styles.bright]: isBright }
+            )}
+            onClick={onClick}
+        >
+            {children}
+        </button>
+    )
 }
 
 export default Default

@@ -1,7 +1,7 @@
-import Default from '@/shared/UI/inputs/default'
+import Main from '@/shared/UI/inputs/main'
 
-const Inputs = {
-    Default
+const Inputs: { [key: string]: React.ElementType } = {
+    Main
 }
 
 export default Inputs
