@@ -10,6 +10,8 @@ import IButton from '@/shared/interfaces/button'
 import Inputs from '@/shared/UI/inputs'
 import Buttons from '@/shared/UI/buttons'
 
+import Loader from '@/shared/UI/loader/UI'
+
 interface Props {
     Hint: React.ElementType
     fields: IInput[]
@@ -41,7 +43,7 @@ const AuthForm = ({ Hint, fields, button, heading }: Props) => {
                 </div>
                 {button && (
                     <Buttons.Default onClick={() => handleClick()} isFilled={true}>
-                        {isLoading ? 'Loading' : button.children}
+                        {isLoading ? <Loader /> : button.children}
                     </Buttons.Default>
                 )}
                 <Hint />
