@@ -1,16 +1,18 @@
 :root {
-  --identify-color-5: rgb(255, 50, 70);
-  --identify-color-10: rgb(0, 255, 130);
-
   --transparent-identify-color-5: #0055FF1A;
 
   --positive-color-5: rgb(0, 200, 160);
   --negative-color-5: #FF3030;
 
   --transition: 200ms all ease-in-out;
+
+  --transparent-additional-color-20: rgba(95, 95, 95, .5);
+  --transparent-additional-color-30: rgba(95, 95, 95, .15);
 }
 
 [data-mode='light'] {
+  --identify-color-5: rgb(255, 0, 50);
+
   --additional-color-5: #FFFFFF;
   --additional-color-10: rgb(245, 245, 245);
   --additional-color-15: rgb(240, 240, 240);
@@ -25,11 +27,12 @@
   --transparent-primary-color-5: #10101080;
   --transparent-primary-color-10: #1010100D;
 
-  --transparent-additional-color-20: rgba(95, 95, 95, .5);
   --transparent-additional-color-25: rgba(255, 255, 255, .75);
 }
 
 [data-mode='dark'] {
+  --identify-color-5: rgb(0, 255, 130);
+
   --additional-color-5: #101010;
   --additional-color-10: #454545;
   --additional-color-15: #606060;
@@ -44,6 +47,5 @@
   --transparent-primary-color-5: #FFFFFF80;
   --transparent-primary-color-10: #FFFFFF0D;
 
-  --transparent-additional-color-20: rgba(95, 95, 95, .5);
   --transparent-additional-color-25: rgba(0, 0, 0, .75);
 }

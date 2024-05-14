@@ -1,0 +1,86 @@
+.section {
+  padding-block: 2.5rem;
+
+  @media (min-width: 992px) {
+    padding-block: 5rem;
+  }
+
+  @media (min-width: 1200px) {
+    padding-block: 7.5rem;
+  }
+
+  & > div {
+    @include column(2.5rem);
+  }
+}
+
+.content {
+  @include column(.5rem);
+}
+
+.cars {
+  display: grid;
+
+  gap: .75rem;
+
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.car {
+  display: flex;
+  flex-direction: column;
+  background: var(--transparent-primary-color-10);
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: 200ms scale ease-in-out;
+
+  &:hover {
+    scale: .975;
+  }
+}
+
+.property {
+  @include row(.75rem);
+
+  color: var(--transparent-primary-color-5);
+
+  font-size: .75rem;
+}
+
+.info {
+  @include column(.5rem);
+
+  padding: 1.25rem;
+}
+
+.buttons {
+  display: flex;
+}
+
+.image {
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.button {
+  color: var(--additional-color-5);
+  background: var(--primary-color-5);
+  width: 100%;
+  font-family: 'TT First Neue', sans-serif;
+  font-size: 1.5rem;
+  padding: 1.25rem;
+  border-radius: 50rem;
+
+  &:hover {
+    background: var(--identify-color-5);
+  }
+}

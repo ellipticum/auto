@@ -1,10 +1,13 @@
 import React from 'react'
 
+import Link from 'next/link'
+
 import styles from './styles.module.scss'
 
 import Container from '@/shared/UI/layouts/container'
 import Header from '@/shared/UI/header'
-import Link from 'next/link'
+
+import Icons from '@/shared/UI/icons'
 
 const Intro = () => {
     return (
@@ -22,7 +25,8 @@ const Intro = () => {
                         </h2>
                     </div>
                     <Link className={styles.link} href='/catalog'>
-                        Перейти в каталог
+                        <span>Перейти в каталог</span>
+                        <Icons.Chevron variable='--identify-color-5' />
                     </Link>
                 </Container>
             </div>

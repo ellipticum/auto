@@ -1,7 +1,7 @@
 interface IconProps {
     width?: number
     height?: number
-    color?: string
+    variable?: string
 }
 
 export default IconProps

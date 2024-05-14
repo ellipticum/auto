@@ -26,8 +26,9 @@
   z-index: 5;
 
   & > div {
-    display: flex;
-    align-items: center;
+    @include column(5rem);
+
+    justify-content: center;
     flex: 1;
   }
 }
@@ -45,4 +46,35 @@
 
   height: fit-content;
   width: min(100%, 50rem);
+}
+
+.link {
+  @include row(.5rem);
+
+  align-items: center;
+  font-size: 1.25rem;
+
+  & svg {
+    opacity: 0;
+  }
+
+  &:hover {
+    color: var(--identify-color-5);
+
+    & > svg {
+      opacity: 100%;
+
+      animation: move 1000ms ease-in-out infinite alternate;
+    }
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-20%);
+  }
 }
