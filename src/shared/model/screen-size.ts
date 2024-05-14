@@ -8,8 +8,7 @@ export enum ScreenSize {
     SM = 576,
     MD = 768,
     LG = 992,
-    XL = 1200,
-    XXL = 1400
+    XL = 1200
 }
 
 interface IState {
@@ -30,10 +29,8 @@ export const useScreenSize = () => {
                 setScreenSize(ScreenSize.MD)
             } else if (window.innerWidth < ScreenSize.XL) {
                 setScreenSize(ScreenSize.LG)
-            } else if (window.innerWidth < ScreenSize.XXL) {
-                setScreenSize(ScreenSize.XL)
             } else {
-                setScreenSize(ScreenSize.XXL)
+                setScreenSize(ScreenSize.XL)
             }
         }
 

@@ -19,6 +19,8 @@ import Previous from '@/shared/UI/icons/previous'
 import Next from '@/shared/UI/icons/next'
 import Plus from '@/shared/UI/icons/plus'
 import Verified from '@/shared/UI/icons/verified'
+import DarkMode from '@/shared/UI/icons/dark-mode'
+import LightMode from '@/shared/UI/icons/light-mode'
 
 const Icons: Record<string, React.ComponentType<IconProps>> = {
     Logo,
@@ -37,7 +39,9 @@ const Icons: Record<string, React.ComponentType<IconProps>> = {
     Previous,
     Next,
     Plus,
-    Verified
+    Verified,
+    DarkMode,
+    LightMode
 }
 
 export default Icons

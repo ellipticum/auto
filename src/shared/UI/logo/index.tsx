@@ -7,7 +7,7 @@ import styles from './styles.module.scss'
 const Logo = () => {
     return (
         <Link className={styles.logo} href='/'>
-            <Icons.Logo width={50} height={50} />
+            Racer
         </Link>
     )
 }

@@ -1,0 +1,48 @@
+.intro {
+  background: center / cover no-repeat url('/images/raster/intro.png');
+
+  height: min(100vh, 50rem);
+
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  background: var(--transparent-additional-color-25);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  position: relative;
+  z-index: 5;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+}
+
+.heading {
+  font-size: clamp(1.5rem, 3.5vw, 2.75rem);
+}
+
+.subheading {
+  font-size: clamp(.75rem, 1.5vw, 1.15rem);
+}
+
+.info {
+  @include column(1.5rem);
+
+  height: fit-content;
+  width: min(100%, 50rem);
+}
