@@ -1,0 +1,23 @@
+.navigator {
+  @include row(.35rem);
+
+  background: var(--additional-color-20);
+  border-radius: 500rem;
+  width: fit-content;
+  cursor: pointer;
+
+  transition: var(--transition);
+
+  &:hover {
+    background: var(--additional-color-10);
+  }
+}
+
+.button {
+  height: 2.75rem;
+  width: 3.05rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,16 @@
+.card {
+  @include column(1.0rem);
+
+  flex: 1;
+  justify-content: space-between;
+  border: .0625rem solid var(--transparent-additional-color-10);
+  padding: clamp(.75rem, 1.85vw, 1.5rem);
+  border-radius: 1.25rem;
+  height: 15.5rem;
+  transition: background 300ms ease-in-out, border-color 300ms ease-in-out, transform 100ms linear;
+
+  &:hover {
+    background: var(--additional-color-20);
+    border-color: var(--additional-color-20);
+  }
+}

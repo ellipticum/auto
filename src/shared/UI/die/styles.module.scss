@@ -1,0 +1,10 @@
+.die {
+  @include text-10;
+
+  padding: .3125rem .975rem;
+  border-radius: 500rem;
+  background: var(--primary-color-5);
+  color: var(--additional-color-10);
+  width: fit-content;
+  user-select: none;
+}

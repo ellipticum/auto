@@ -1,0 +1,15 @@
+.section {
+  background: var(--additional-color-5);
+  border-radius: clamp(1.25rem, 2.5vw, 2.25rem);
+}
+
+.default,
+.large {
+  padding: clamp(1.25rem, 2.5vw, 2.25rem);
+}
+
+.large {
+  @media (min-width: 1100px) {
+    padding: clamp(1.5rem, 4.5vw, 5rem);
+  }
+}

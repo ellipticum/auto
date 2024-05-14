@@ -1,0 +1,18 @@
+.wrapper {
+  @include row(.5rem);
+
+  min-height: 100vh;
+  background: var(--additional-color-10);
+}
+
+.main {
+  flex: 1;
+  padding: clamp(.75rem, 2.5vw, 1.5rem);
+  max-width: 150rem;
+}
+
+.content {
+  @include column(clamp(1.5rem, 2.75vw, 1.85rem));
+
+  height: fit-content;
+}

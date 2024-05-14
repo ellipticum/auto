@@ -1,0 +1,101 @@
+// Text
+
+// Medium
+
+@mixin text-5 {
+  font-size: clamp(1.0rem, 2.75vw, 1.25rem);
+}
+
+// Default
+
+@mixin text-10 {
+  font-size: 1.0rem;
+  line-height: 150%;
+}
+
+// Alternative basic
+
+@mixin text-85 {
+  font-size: .925rem;
+  line-height: 175%;
+}
+
+// Basic
+
+@mixin text-15 {
+  font-size: .875rem;
+}
+
+// Small
+
+@mixin text-25 {
+  font-size: .75rem;
+}
+
+// Tiny
+
+@mixin text-30 {
+  font-size: .625rem;
+}
+
+// Headings
+
+// Heading 1
+
+@mixin text-35 {
+  font-size: 2.5rem;
+
+  @media (min-width: 768px) {
+    font-size: 4.0rem;
+  }
+}
+
+// Heading 2
+
+@mixin text-40 {
+  font-size: clamp(1.75rem, 4.5vw, 3.0rem);
+}
+
+// Heading 3
+
+@mixin text-45 {
+  font-size: 2.5rem;
+}
+
+// Heading 4
+
+@mixin text-50 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+}
+
+// Heading 5
+
+@mixin text-55 {
+  font-size: clamp(1.0rem, 2.5vw, 1.5rem);
+}
+
+// Heading 6
+
+@mixin text-90 {
+  font-size: clamp(1.0rem, 2.25vw, 1.25rem);
+}
+
+// Button
+
+@mixin text-60 {
+  font-size: 1.0rem;
+  font-variation-settings: 'wght' 500, 'wdth' 115, 'opsz' 12, 'ytlc' 475;
+}
+
+@mixin text-70 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-family: 'TT First Neue', sans-serif;
+}
+
+// Link
+
+@mixin text-65 {
+  font-size: 1.0rem;
+  font-weight: 500;
+}
+

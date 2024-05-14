@@ -1,0 +1,12 @@
+.content {
+  display: grid;
+  gap: clamp(1.5rem, 2.75vw, 1.85rem);
+
+  @media (min-width: 1100px) {
+    grid-template-columns: 15fr 10fr;
+  }
+
+  @media (min-width: 1300px) {
+    grid-template-columns: 10fr 5fr;
+  }
+}

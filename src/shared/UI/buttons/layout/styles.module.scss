@@ -1,0 +1,25 @@
+.button {
+  @include text-60;
+
+  border: .10rem solid;
+  padding: .625rem 2.0rem;
+  border-radius: 500rem;
+  transition: var(--transition);
+
+  &:hover {
+    background: transparent !important;
+    color: var(--primary-color-5) !important;
+    border-color: var(--primary-color-5) !important;
+  }
+}
+
+.filled {
+  width: 100%;
+}
+
+.stroke {
+  &:hover {
+    background: var(--primary-color-5) !important;
+    color: var(--additional-color-5) !important;
+  }
+}

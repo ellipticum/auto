@@ -1,0 +1,15 @@
+.header {
+  padding-block: 1.25rem;
+
+  box-shadow: 0 0 3.125rem var(--transparent-additional-color-10);
+}
+
+.header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons {
+  @include row(.625rem);
+}
