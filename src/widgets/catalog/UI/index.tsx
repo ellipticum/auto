@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 
 import Image from 'next/image'
 
@@ -19,12 +19,31 @@ interface Props {
 const Catalog = ({ cars }: Props) => {
     const router = useRouter()
 
+    const [filteredCars, setFilteredCars] = useState(cars)
+
+    const filter = (query: string) => {
+        if (!cars) {
+            return
+        }
+
+        const filtered = cars.filter((car) => car.name.toLowerCase().includes(query.toLowerCase()))
+        setFilteredCars(filtered)
+    }
+
     return (
         <section className={styles.section}>
             <Container>
-                {cars ? (
+                <div>
+                    <input
+                        className={styles.input}
+                        type='text'
+                        placeholder='Поиск'
+                        onChange={(event) => filter(event.target.value)}
+                    />
+                </div>
+                {filteredCars ? (
                     <div className={styles.cars}>
-                        {cars.map((car, index) => (
+                        {filteredCars.map((car, index) => (
                             <div
                                 className={styles.car}
                                 key={index}
@@ -59,6 +78,12 @@ const Catalog = ({ cars }: Props) => {
                     </div>
                 ) : (
                     <div>Что-то пошло не так</div>
+                )}
+
+                {filteredCars && filteredCars.length === 0 && (
+                    <div className={styles.meta}>
+                        <h1>Ничего не найдено :(</h1>
+                    </div>
                 )}
             </Container>
         </section>

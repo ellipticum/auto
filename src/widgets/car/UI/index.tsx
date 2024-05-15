@@ -8,7 +8,7 @@ import cn from 'classnames'
 import useEmblaCarousel from 'embla-carousel-react'
 
 const Car = (car: ICar) => {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ align: 'center' })
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' })
     const [selectedIndex, setSelectedIndex] = useState(0)
     const router = useRouter()
 

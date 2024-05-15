@@ -17,7 +17,7 @@ interface Props {
 const CarInfo = ({ car }: Props) => {
     const { setIsOrderWindowHidden, setCar } = useOrderWindowStore()
 
-    const [emblaRef, emblaApi] = useEmblaCarousel({ align: 'center' })
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' })
 
     const [selectedIndex, setSelectedIndex] = useState(0)
 

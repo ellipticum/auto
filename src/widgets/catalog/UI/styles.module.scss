@@ -14,6 +14,17 @@
   }
 }
 
+.meta {
+  padding-block: 10rem;
+}
+
+.input {
+  color: var(--primary-color-5);
+  font-size: 1.5rem;
+  padding-block: .5rem;
+  border-bottom: .125rem solid var(--transparent-additional-color-30);
+}
+
 .content {
   @include column(.5rem);
 }
