@@ -1,0 +1,32 @@
+.dash {
+  border-radius: .75rem;
+  background: var(--primary-color-5);
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  display: flex;
+  padding: .95rem 1.15rem;
+  width: 100%;
+  font-size: .95rem;
+  font-weight: 500;
+  color: var(--additional-color-5);
+
+  &:first-of-type {
+    border-top-right-radius: .75rem;
+    border-top-left-radius: .75rem;
+  }
+
+  &:last-of-type {
+    border-bottom-right-radius: .75rem;
+    border-bottom-left-radius: .75rem;
+  }
+
+  transition: 200ms all ease-in-out;
+
+  &:hover {
+    background: var(--identify-color-5);
+  }
+}

@@ -9,7 +9,7 @@ interface IInfo {
 
 const logIn = async (info: IInfo) => {
     try {
-        const { data } = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/login`, {
+        const { data } = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/auth/login`, {
             ...info
         })
 

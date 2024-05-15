@@ -10,7 +10,7 @@ import { useRouter } from 'next/navigation'
 
 import useAuthStore from '@/shared/store/auth'
 
-import logIn from '@/widgets/login/utils/log-in'
+import register from '../utils/register'
 
 import AuthForm from '@/widgets/auth-form/UI'
 
@@ -35,7 +35,7 @@ const Schema = Yup.object().shape({
         .required('Пароль обязателен')
 })
 
-const Login = () => {
+const Registration = () => {
     const router = useRouter()
 
     const { setIsAuth } = useAuthStore()
@@ -52,7 +52,7 @@ const Login = () => {
     const [password, setPassword] = useState('')
     const [isPasswordValid, setIsPasswordValid] = useState(true)
 
-    const heading = 'Войти'
+    const heading = 'Регистрация'
 
     useEffect(() => {
         setIsLoginValid(true)
@@ -134,7 +134,7 @@ const Login = () => {
 
         if (!isValid) return
 
-        const data = await logIn({ login, password })
+        const data = await register({ login, password, firstName, lastName })
 
         if (!data) return
 
@@ -168,4 +168,4 @@ const Login = () => {
     return <AuthForm {...props} />
 }
 
-export default Login
+export default Registration

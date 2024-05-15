@@ -3,8 +3,8 @@
   position: fixed;
   backdrop-filter: blur(.15rem);
   width: 100%;
-  background: var(--transparent-additional-color-5);
-
+  background: var(--transparent-additional-color-30);
+  z-index: 50;
   box-shadow: 0 0 3.125rem var(--transparent-additional-color-10);
 }
 
@@ -15,5 +15,5 @@
 }
 
 .buttons {
-  @include row(.625rem);
+  @include row(1.25rem);
 }

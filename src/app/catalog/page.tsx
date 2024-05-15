@@ -1,17 +1,15 @@
 import React from 'react'
-
 import Wrapper from '@/shared/UI/layouts/wrapper'
-
-import Registration from '@/widgets/registration/UI'
 import Header from '@/shared/UI/header'
+import CatalogIntro from '@/widgets/catalog-intro/UI'
 
-const Page = () => {
+const Catalog = () => {
     return (
         <Wrapper>
             <Header />
-            <Registration />
+            <CatalogIntro />
         </Wrapper>
     )
 }
 
-export default Page
+export default Catalog

@@ -19,8 +19,6 @@ const Icon = ({ variable = '--primary-color-5', children, ...props }: Props) => 
         if (wrapper) {
             const style = getComputedStyle(wrapper)
 
-            console.log(style)
-
             setColor(style.getPropertyValue(variable).trim() || 'none')
         }
     }, [mode, variable])

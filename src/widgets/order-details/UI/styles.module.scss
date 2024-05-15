@@ -1,0 +1,33 @@
+.image {
+  border-top-right-radius: .5rem;
+  border-top-left-radius: .5rem;
+  margin-top: -1.5rem;
+  margin-inline: -1.5rem;
+  width: calc(100% + 3.0rem);
+}
+
+.header {
+  @include row(.5rem);
+
+  justify-content: space-between;
+  padding-top: 1.0rem;
+}
+
+.key {
+  font-size: .75rem;
+  color: var(--transparent-primary-color-5);
+}
+
+.date {
+  color: var(--identify-color-5);
+}
+
+.duration {
+  font-size: 1.0rem;
+}
+
+.name {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+}

@@ -17,11 +17,7 @@ const determineStatus = (code: number) => {
 const notify = ({ result, errors, error }: { result?: any; errors?: any; error?: any }) => {
     const { setMessage, setStatus, setIsNotificationHidden } = useNotificationStore.getState()
 
-    console.log(result, errors, error)
-
-    const message = error ? error : errors ? 'Что-то пошло не так' : 'Успешное выполнение операции'
-
-    console.log(message)
+    const message = error ? error : result ? 'Операция выполнена' : 'Что-то пошло не так'
 
     const code = result ? 200 : 400
 

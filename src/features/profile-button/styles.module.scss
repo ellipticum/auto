@@ -1,0 +1,17 @@
+.meta {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}

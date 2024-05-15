@@ -1,0 +1,40 @@
+.profile {
+    padding-block: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > div {
+        @include column(1.5rem);
+    }
+}
+
+.orders {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+.name {
+    font-size: 3.5rem;
+}
+
+.heading {
+    font-size: 1.5rem;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-block: 1.25rem;
+    color: var(--additional-color-30);
+    border-bottom: .0625rem solid var(--primary-color-5);
+    transition: var(--identify-color-5);
+    cursor: pointer;
+
+    &:hover {
+        border-color: var(--identify-color-5)
+    }
+}

@@ -4,12 +4,17 @@ import Wrapper from '@/shared/UI/layouts/wrapper'
 
 import Intro from '@/widgets/intro/UI'
 import CatalogPreview from '@/widgets/catalog-preview/UI'
+import Header from '@/shared/UI/header'
+import getCars from '@/shared/utils/get-cars'
 
-const Page = () => {
+const Page = async () => {
+    const cars = await getCars(20)
+
     return (
         <Wrapper>
+            <Header />
             <Intro />
-            <CatalogPreview />
+            <CatalogPreview cars={cars} />
         </Wrapper>
     )
 }

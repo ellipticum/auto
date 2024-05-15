@@ -1,0 +1,43 @@
+.overlay {
+  position: fixed;
+
+  backdrop-filter: blur(.05rem);
+  z-index: 100;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  background: rgba(0, 0, 0, .75);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.button {
+  top: .5rem;
+  right: .5rem;
+  width: 2.15rem;
+  height: 2.15rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 500rem;
+  align-items: center;
+  background: var(--primary-color-5);
+  position: absolute;
+}
+
+.window {
+  position: relative;
+  border-radius: 1.25rem;
+  background: var(--additional-color-5);
+  padding: 1.5rem;
+}

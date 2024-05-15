@@ -92,6 +92,8 @@ const Login = () => {
 
         if (!data) return
 
+        console.log(data)
+
         localStorage.setItem('token', data.result)
 
         setIsAuth(true)
