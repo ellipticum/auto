@@ -8,7 +8,7 @@ import Header from '@/shared/UI/header'
 import getCars from '@/shared/utils/get-cars'
 
 const Page = async () => {
-    const cars = await getCars(20)
+    const cars = await getCars(12)
 
     return (
         <Wrapper>

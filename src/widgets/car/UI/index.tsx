@@ -11,7 +11,7 @@ const Car = (car: ICar) => {
 
     return (
         <div className={styles.car} onClick={() => router.push(`/catalog/${car.id}`)}>
-            <Image
+            <img
                 className={styles.image}
                 src={car.images[0]}
                 alt={car.name}

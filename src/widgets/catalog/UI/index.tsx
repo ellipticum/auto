@@ -16,19 +16,12 @@ interface Props {
     cars: ICar[] | undefined
 }
 
-const CatalogPreview = ({ cars }: Props) => {
+const Catalog = ({ cars }: Props) => {
     const router = useRouter()
 
     return (
         <section className={styles.section}>
             <Container>
-                <div className={styles.content}>
-                    <h1 className={styles.heading}>Каталог автомобилей</h1>
-                    <p className={styles.subheading}>
-                        Выберите автомобиль, удобную для вас смену и подобрать условия поездки
-                    </p>
-                </div>
-
                 {cars ? (
                     <div className={styles.cars}>
                         {cars.map((car, index) => (
@@ -67,13 +60,9 @@ const CatalogPreview = ({ cars }: Props) => {
                 ) : (
                     <div>Что-то пошло не так</div>
                 )}
-
-                <button className={styles.button} onClick={() => router.push('/catalog')}>
-                    Перейти в каталог
-                </button>
             </Container>
         </section>
     )
 }
 
-export default CatalogPreview
+export default Catalog

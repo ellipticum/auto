@@ -1,0 +1,152 @@
+.wrapper {
+  padding-block: 7.5rem;
+}
+
+.heading {
+  font-size: 2.0rem;
+  margin-bottom: 0.75rem;
+}
+
+.description {
+  font-size: 1.125rem;
+  margin-bottom: 1.125rem;
+}
+
+.viewport {
+  overflow: hidden;
+  height: fit-content;
+  border-radius: 1.0rem;
+  aspect-ratio: 1 / 1;
+}
+
+.image {
+  border-radius: 1.25rem;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.prices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-block: 2.5rem;
+}
+
+.properties {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.info {
+  @include column(5rem);
+
+  justify-content: space-between;
+}
+
+.buttons {
+  @include row(.5rem);
+}
+
+.button {
+  width: 100%;
+  background: var(--primary-color-5);
+  color: var(--additional-color-5);
+
+  font-size: 1.125rem;
+
+  padding: .75rem 1.125rem;
+  transition: 200ms all ease-in-out;
+  border-radius: 500rem;
+  font-family: 'Nunito Sans', sans-serif;
+  font-variation-settings: 'wght' 500, 'wdth' 115, 'opsz' 12, 'ytlc' 475;
+
+  &:hover {
+    background: var(--identify-color-5);
+  }
+
+  @media (min-width: 992px) {
+    width: 40%;
+  }
+}
+
+.property {
+  font-size: .875rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.preview {
+  width: 5rem;
+  height: 5rem;
+  border-radius: .75rem;
+  cursor: pointer;
+  transition: 100ms scale ease-in-out;
+
+  @media (min-width: 576px) and (max-width: 992px) {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+
+  &:hover {
+    scale: 95%;
+  }
+}
+
+.tape {
+  display: flex;
+}
+
+.container {
+  flex: 0 0 100%;
+  position: relative;
+  cursor: pointer;
+  transition: 200ms scale ease-in-out, 200ms filter ease-in-out;
+  filter: brightness(50%);
+  scale: 75%;
+}
+
+.active {
+  filter: unset;
+  scale: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  @media (min-width: 992px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.images {
+  @include column(.5rem);
+
+  @media (min-width: 768px) {
+    flex-direction: row-reverse;
+  }
+}
+
+.dump {
+  @include row(.5rem);
+
+  margin-inline: -1.5rem;
+  padding-inline: 1.5rem;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  overflow: auto;
+
+  scrollbar-width: none;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}

@@ -14,6 +14,7 @@ import Header from '@/shared/UI/header'
 import useAuthStore from '@/shared/store/auth'
 import getUser from '@/shared/utils/get-user'
 import OrderDetails from '@/widgets/order-details/UI'
+import OrderWindow from '@/widgets/order-window/UI'
 
 const Wrapper = ({ children }: LayoutProps) => {
     const { mode, setMode } = useModeStore()
@@ -46,6 +47,7 @@ const Wrapper = ({ children }: LayoutProps) => {
             {children}
             <Notification />
             <OrderDetails />
+            <OrderWindow />
         </div>
     )
 }

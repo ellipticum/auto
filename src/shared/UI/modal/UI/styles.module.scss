@@ -1,6 +1,8 @@
 .overlay {
   position: fixed;
 
+  cursor: pointer;
+
   backdrop-filter: blur(.05rem);
   z-index: 100;
 

@@ -24,7 +24,7 @@ const OrderDetails = () => {
         <Modal isHidden={isOrderDetailsHidden} setIsHidden={setIsOrderDetailsHidden}>
             <div className={styles.content}>
                 <div>
-                    <Image
+                    <img
                         className={styles.image}
                         src={car.images[0]}
                         alt={car.name}
