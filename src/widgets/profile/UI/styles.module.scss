@@ -9,6 +9,11 @@
     }
 }
 
+.meta {
+    padding-block: 10rem;
+    color: var(--transparent-additional-color-30);
+}
+
 .orders {
     display: grid;
     grid-template-columns: 1fr;

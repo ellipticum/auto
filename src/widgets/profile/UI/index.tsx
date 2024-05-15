@@ -49,6 +49,11 @@ const Profile = () => {
                             </div>
                         ))}
                     </div>
+                    {profile.orders.length === 0 && (
+                        <div className={styles.meta}>
+                            <h1>Ещё нет заказов :(</h1>
+                        </div>
+                    )}
                 </div>
             </Container>
         </div>
