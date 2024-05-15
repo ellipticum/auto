@@ -133,7 +133,8 @@
 }
 
 .dump {
-  @include row(.5rem);
+  display: none;
+
 
   margin-inline: -1.5rem;
   padding-inline: 1.5rem;
